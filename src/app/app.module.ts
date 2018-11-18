@@ -1,3 +1,4 @@
+import { CoursesService } from './courses.service';
 import { CoursesComponent } from './courses.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,14 +10,15 @@ import { CourseComponent } from './course/course.component';
   // where we add all the components that are part of this module
   declarations: [
     AppComponent,
-    CoursesComponent,
-    CourseComponent
+    CourseComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
       // Uses the Singleton Pattern; a single instance of a given object exists in the memory.
+      CoursesService
   ],
   bootstrap: [AppComponent]
 })
