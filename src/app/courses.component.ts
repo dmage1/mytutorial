@@ -1,6 +1,6 @@
-import { CoursesService } from './courses.service';
-
 import { Component } from '@angular/core';
+
+import { CoursesService } from './courses.service';
 
 // anywhere we have an element like <courses>, angular is going to render the template for this component
 
@@ -13,8 +13,7 @@ import { Component } from '@angular/core';
       <li *ngFor="let course of courses">
         {{ course }}
       </li>
-    </ul>
-  `
+    </ul>`
 })
 export class CoursesComponent{
 
@@ -25,3 +24,8 @@ export class CoursesComponent{
     this.courses = service.getCourses();
   }
 }
+
+// ` to split html over lines
+// <courses> "courses"
+// <div class="courses"> ".courses"
+// <div id="courses"> "#courses"

@@ -1,17 +1,17 @@
-import { CoursesService } from './courses.service';
-import { CoursesComponent } from './courses.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CoursesComponent } from './courses.component';
+import { CoursesService } from './courses.service';
 import { CourseComponent } from './course/course.component';
 
 @NgModule({
   // where we add all the components that are part of this module
   declarations: [
     AppComponent,
-    CourseComponent,
-    CoursesComponent
+    CoursesComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule
