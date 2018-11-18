@@ -1,18 +1,26 @@
 import { Component } from '@angular/core';
 
+// anywhere we have an element like <courses>, angular is going to render the template for this component
+
+// registered in app module
+
 @Component({
-  selector: 'courses'
-  template: '<h2>{{ title }}</h2>'
+  selector: 'courses',
+  template: `<h2>{{ getTitle() }}</h2>
+    <ul>
+      <li *ngFor="let course of courses">
+        {{ course }}
+      </li>
+    </ul>
+  `
+
 })
 export class CoursesComponent{
 
   title = "List of courses";
-  courses;
+  courses = ["course1", "course2", "course3"];
 
   getTitle() {
-    /** template: '<h2>{{ title }}<\h2>' **/
-    /** template: '<h2>{{ "Title:" + title }}<\h2>' **/
-    /** template: '<h2>{{ getTitle() }}<\h2>' **/
     return this.title;
   }
 
